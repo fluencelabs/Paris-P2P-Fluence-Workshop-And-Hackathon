@@ -1,0 +1,40 @@
+import "@fluencelabs/aqua-lib/builtin.aqua"
+
+func getRelayTimestamp() -> u64:
+    on %init_peer_id%:
+        ts <- Peer.timestamp_ms()
+    <- ts
+
+
+service MyOp("op"):
+    identity(x:u64) -> string
+
+func hello_world() -> string:
+    result = "Hello Paris P2P. Seconds passed since Epoch: "
+    -- on HOST_PEER_ID:
+    on %init_peer_id%:
+        ts <- Peer.timestamp_ms()
+
+    ts_str <- MyOp.identity(ts)
+    res <- Op.concat_strings(result, ts_str)
+    <- res
+
+
+func hello_neighbors(node: string) -> []u64, []string:
+    ts: *u64
+    on node:
+        k <- Op.string_to_b58(node)
+        nodes <- Kademlia.neighborhood(k, nil, nil)
+        if Op.array_length(nodes) > 0:
+            for n <- nodes par:
+                ts <- Peer.timestamp_sec()
+                Op.noop()
+            -- join ts[Op.array_length(nodes)]
+            join ts[5]
+    <- ts, nodes
+
+
+func my_timestamp() -> u64, string:
+    --on %init_peer_id%:
+    ts <- Peer.timestamp_sec()
+    <- ts, %init_peer_id%
