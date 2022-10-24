@@ -23,8 +23,8 @@ npm start
 For more information, see:
 
 * [Hacking On Fluence Primer](https://fluencenetwork.notion.site/Hacking-On-Fluence-Primer-28a87754397048e1bec72e3bfc91fd9b)
-* [Fluence Documentation](https://doc.fluence.dev/docs/)
-* [Aqua Book](https://doc.fluence.dev/aqua-book/)
+* [Fluence Documentation](https://fluence.dev/docs/build/introduction)
+* [Aqua Book](https://fluence.dev/docs/aqua-book/introduction)
 * [Fluence Quickstart](https://github.com/fluencelabs/examples/tree/main/quickstart)
 * [Fluence Examples](https://github.com/fluencelabs/examples)
 * [Fluence JS Examples](https://github.com/fluencelabs/examples/tree/main/fluence-js-examples)
