@@ -5,8 +5,8 @@ Template for FluenceJS applications with nodejs.
 Useful resources:
 
 -   [How to hack on Fluence](https://www.notion.so/fluencenetwork/Hacking-On-Fluence-Primer-28a87754397048e1bec72e3bfc91fd9b)
--   [Aqua documentation](https://doc.fluence.dev/aqua-book/)
--   [FluenceJS documentation](https://doc.fluence.dev/docs/fluence-js)
+-   [Aqua documentation](https://fluence.dev/docs/aqua-book/introduction)
+-   [FluenceJS documentation](https://fluence.dev/docs/build/fluence-js/)
 -   [More examples](https://github.com/fluencelabs/examples)
 
 ## Prerequisites
@@ -51,4 +51,4 @@ All aqua code is placed in `aqua` directory. The TypeScript files are located in
 
 ## Using FluenceJS in browser
 
-You are free to use the UI framework of your choosing. Bootstrap the application and then install the same dependencies and set up the compiler. You can also refer to the [related documentation](https://doc.fluence.dev/docs/fluence-js/2_basics) section. Also you need to configure the http server, hosting you application code to serve additional files. You can read about it in the (documentation)[https://doc.fluence.dev/docs/fluence-js/4_run_in_browser-1]
+You are free to use the UI framework of your choosing. Bootstrap the application and then install the same dependencies and set up the compiler. You can also refer to the [related documentation](https://fluence.dev/docs/build/fluence-js/basics) section. Also you need to configure the http server, hosting you application code to serve additional files. You can read about it in the [documentation](https://fluence.dev/docs/build/fluence-js/run-in-browser)
